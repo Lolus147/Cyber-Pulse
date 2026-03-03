@@ -110,8 +110,9 @@ flowchart LR
 Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w projekcie. Każdy element został dobrany tak, aby realizował konkretne zadanie w łańcuchu bezpieczeństwa, nie obciążając przy tym nadmiernie zasobów terminala HP.
 
 ### 1. Zdalny Dostęp i Komunikacja
-* **WireGuard (VPN):** * **Do czego służy:** Tworzy w pełni szyfrowany wirtualny tunel (Mesh) między zdalnym klientem a serwerem domowym.
-  * **Dlaczego to rozwiązanie:** Pozwala na bezpieczne zarządzanie systemem z zewnątrz. Wykorzystuje mechanizm *UDP hole punching*, co skutecznie penetruje blokady NAT (CGNAT) narzucane przez dostawców internetu (ISP). Dzięki temu serwer nie wymaga publicznego adresu IP ani otwierania wrażliwych portów na domowym routerze.
+* **WireGuard (via Tailscale):**
+  * **Do czego służy:** Tworzy w pełni szyfrowany wirtualny tunel (Mesh) między zdalnym klientem a serwerem domowym.
+  * **Dlaczego to rozwiązanie:** Pozwala na bezpieczne zarządzanie systemem z zewnątrz. Użycie platformy **Tailscale** jako warstwy kontrolnej dla protokołu WireGuard w pełni automatyzuje wymianę kluczy kryptograficznych i zarządzanie siecią. Narzędzie to wykorzystuje zaawansowany mechanizm *UDP hole punching* (oraz szyfrowane serwery przekaźnikowe DERP w ostateczności), co skutecznie penetruje surowe blokady NAT i CGNAT narzucane przez dostawców internetu (ISP). Dzięki temu serwer nie wymaga publicznego adresu IP, modyfikacji ustawień na głównym routerze domowym ani otwierania wrażliwych portów, zapewniając stabilne połączenie punkt-punkt (Peer-to-Peer).
 
 ### 2. Aktywna Obrona i Filtrowanie (Tarcza)
 * **Pi-hole (DNS Sinkhole):**
