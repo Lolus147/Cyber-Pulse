@@ -83,7 +83,7 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 ### 2. Aktywna Obrona i Filtrowanie (Tarcza)
 * **Pi-hole (DNS Sinkhole):**
   * **Do czego służy:** Pełni rolę lokalnego serwera DNS dla całej sieci.
-  * **Dlaczego to rozwiązanie:** Analizuje każde zapytanie sieciowe wysyłane przez urządzenia domowe (np. telefony, smart TV, piece IoT). Jeśli zapytanie prowadzi do znanej domeny ze złośliwym oprogramowaniem, telemetrią lub reklamami, Pi-hole natychmiast je blokuje (odpowiada adresem `0.0.0.0`), oszczędzając przepustowość i chroniąc urządzenia przed infekcją.
+  * **Dlaczego to rozwiązanie:** Analizuje każde zapytanie sieciowe wysyłane przez urządzenia domowe (np. telefony, smart TV, czujniki IoT). Jeśli zapytanie prowadzi do znanej domeny ze złośliwym oprogramowaniem, telemetrią lub reklamami, Pi-hole natychmiast je blokuje (odpowiada adresem `0.0.0.0`), oszczędzając przepustowość i chroniąc urządzenia przed infekcją.
 * **Suricata (Intrusion Detection System - IDS):**
   * **Do czego służy:** System wczesnego ostrzegania dokonujący głębokiej inspekcji pakietów (Deep Packet Inspection).
   * **Dlaczego to rozwiązanie:** Nasłuchuje na interfejsach sieciowych i analizuje ruch w czasie rzeczywistym pod kątem sygnatur znanych ataków, wirusów czy anomalii. Wyłapuje skomplikowane zagrożenia sieciowe, których nie widać w standardowych logach systemowych.
@@ -99,13 +99,13 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 ### 4. Telemetria i Wizualizacja (Monitoring)
 * **Docker i Docker Compose:**
   * **Do czego służy:** Platforma do lekkiej wirtualizacji i zarządzania kontenerami.
-  * **Dlaczego to rozwiązanie:** Zapewnia higienę systemu. Narzędzia analityczne (Prometheus, Grafana) zostały zamknięte w odizolowanych kontenerach. Gwarantuje to brak konfliktów z głównym systemem operacyjnym (Debian) oraz wdraża profesjonalne podejście *Infrastructure as Code* (IaC).
+  * **Dlaczego to rozwiązanie:** Zapewnia higienę systemu. Narzędzia analityczne (Prometheus, Grafana) zostały zamknięte w odizolowanych kontenerach. Gwarantuje to brak konfliktów z głównym systemem operacyjnym (Debian) oraz wdraża profesjonalne podejście.
 * **Prometheus:**
   * **Do czego służy:** Potężna czasowa baza danych (Time-Series Database).
   * **Dlaczego to rozwiązanie:** Co kilkanaście sekund odpytuje system i usługi sieciowe o ich stan (np. utylizacja procesora, statystyki zablokowanych reklam, liczba banów w CrowdSec). Pamięta historyczne statystyki z dokładnością do pojedynczych sekund.
 * **Grafana:**
   * **Do czego służy:** Interaktywny interfejs analityczny.
-  * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa (np. wyświetlanie map ataków CAPI czy puls systemu).
+  * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa.
 
 ### 5. Interfejs Zarządzania (Command Line)
 * **Zsh + Powerlevel10k + `cyberpulse.sh`:**
