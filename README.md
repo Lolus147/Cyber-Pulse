@@ -15,8 +15,11 @@ Sercem całego systemu jest energooszczędny terminal (Thin Client), który idea
  * 📡 **Moduł Zwiadu Radiowego:** Zewnętrzna karta sieciowa USB **Alfa Network AWUS036AXM (Wi-Fi 6E)**. Zewnętrzna karta sieciowa USB Alfa Network AWUS036AXM (Wi-Fi 6E). Skonfigurowana w trybie monitora / packet injection na potrzeby systemu nasłuchu Kismet.
 
 
-
-![Panel CLI Cyber-Pulse](images/terminal.png)
+<details>
+  <summary><strong>▶️ Panel CLI Cyber-Pulse (Kliknij, aby rozwinąć)</strong></summary>
+  <br>
+  <img width="411" height="211" alt="terminal-cli" src="images/terminal.png" />
+</details>
 
 ---
 
