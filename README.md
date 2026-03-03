@@ -7,12 +7,12 @@
 ## 🖥️ Platforma Sprzętowa (Hardware)
 Sercem całego systemu jest energooszczędny terminal (Thin Client), który idealnie sprawdza się w roli bezgłośnego, domowego serwera pracującego w trybie 24/7. Wykorzystanie lekkich narzędzi i konteneryzacji pozwala na płynne działanie systemów bezpieczeństwa na ograniczonych zasobach.
 
- 🖥️ **Urządzenie:** HP t620 Thin Client
- 🐧 **System Operacyjny:** Debian GNU/Linux
- 🧠 **Procesor (CPU):** AMD GX-415GA SOC (Quad-Core) @ 1.50 GHz
- ⚙️ **Pamięć RAM:** 4 GB DDR3L
- 💾 **Dysk (Storage):** 120 GB M.2 2242 SATA III SSD (TLC)
- 📡 **Moduł Zwiadu Radiowego:** Zewnętrzna karta sieciowa USB **Alfa Network AWUS036AXM (Wi-Fi 6E)**. Zewnętrzna karta sieciowa USB Alfa Network AWUS036AXM (Wi-Fi 6E). Skonfigurowana w trybie monitora / packet injection na potrzeby systemu nasłuchu Kismet.
+ * 🖥️ **Urządzenie:** HP t620 Thin Client
+ * 🐧 **System Operacyjny:** Debian GNU/Linux
+ * 🧠 **Procesor (CPU):** AMD GX-415GA SOC (Quad-Core) @ 1.50 GHz
+ * ⚙️ **Pamięć RAM:** 4 GB DDR3L
+ * 💾 **Dysk (Storage):** 120 GB M.2 2242 SATA III SSD (TLC)
+ * 📡 **Moduł Zwiadu Radiowego:** Zewnętrzna karta sieciowa USB **Alfa Network AWUS036AXM (Wi-Fi 6E)**. Zewnętrzna karta sieciowa USB Alfa Network AWUS036AXM (Wi-Fi 6E). Skonfigurowana w trybie monitora / packet injection na potrzeby systemu nasłuchu Kismet.
 
 
 
