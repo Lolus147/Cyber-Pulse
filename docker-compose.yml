@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    network_mode: "host"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    restart: always
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "0000:0000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    restart: always
+
+  node-exporter:
+    image: prom/node-exporter
+    container_name: node-exporter
+    ports:
+      - "0000:0000"
+    restart: always
+  telegraf-suricata:
+    image: telegraf:latest
+    container_name: telegraf-suricata
+    network_mode: "host"
+    user: "root"
+    volumes:
+      - /var/log/suricata/eve.json:/var/log/suricata/eve.json:ro
+      - /home/user/monitoring/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    restart: always
+
+volumes:
+  grafana-data:
