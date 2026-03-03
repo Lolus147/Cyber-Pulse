@@ -23,6 +23,15 @@ Sercem całego systemu jest energooszczędny terminal (Thin Client), który idea
 
 ---
 
+## 📂 Struktura Repozytorium
+
+W tym repozytorium udostępniam główny kod konfiguracyjny, który napędza moje środowisko:
+
+* `docker-compose.yml` – Plik wdrożeniowy w standardzie **Infrastructure as Code (IaC)**. Definiuje, mapuje i stawia całe środowisko analityczne (bazy danych i wizualizację) w odizolowanych kontenerach Dockera, zapewniając pełną powtarzalność środowiska.
+* `cyberpulse.sh` – Mój autorski skrypt powitalny napisany w Bashu. Działa jako terminalowy panel dowodzenia: wyciąga dane sprzętowe, weryfikuje statusy krytycznych usług bezpieczeństwa (Suricata, CrowdSec, Pi-hole) i odpytuje zaporę o liczbę aktualnie zablokowanych intruzów, wyświetlając raport od razu po zalogowaniu przez SSH.
+
+---
+
 ## 🏗️ Architektura Sieci
 
 * **Szyfrowany tunel (VPN):** Zapewnia bezpieczny, zdalny punkt wejścia do sieci domowej z zewnątrz.
@@ -74,6 +83,20 @@ flowchart LR
 
 ```
 
+---
+
+🏠 Portal startowy
+* **Homer:**
+  * **Do czego służy:** Lekka, statyczna strona startowa serwera.
+  * **Dlaczego to rozwiązanie:** Działa jako główny "Hub" nawigacyjny całego centrum SOC. Zamiast pamiętać dziesiątki portów i adresów IP dla Grafany, Pi-hole czy innych usług, Homer zapewnia scentralizowany, estetyczny panel w przeglądarce, z którego można jednym kliknięciem przejść do każdego modułu zarządzania w Home Labie.
+
+<details>
+  <summary><strong>▶️ Portal startowy HOMER (Kliknij, aby rozwinąć)</strong></summary>
+  <br>
+  <img alt="terminal-cli" src="images/homer.png" />
+</details>
+
+---
 
 ## ⚙️ Szczegółowy Opis Komponentów i Technologii
 
@@ -99,7 +122,7 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
   * **Do czego służy:** Zaawansowany radar przestrzeni powietrznej Wi-Fi.
   * **Dlaczego to rozwiązanie:** Zewnętrzna karta sieciowa z chipsetem wspierającym standard Wi-Fi 6E została wprowadzona w tryb monitora (Monitor Mode). System bezgłośnie "nasłuchuje" fal radiowych, wykrywając nieautoryzowane próby połączeń, ataki deautentykacyjne na lokalne routery oraz obce urządzenia zbliżające się do fizycznej strefy bezpieczeństwa.
 
-### 4. Telemetria i Wizualizacja (Monitoring)
+### 4. Telemetria, Wizualizacja i Alerting (Monitoring & IR)
 * **Docker i Docker Compose:**
   * **Do czego służy:** Platforma do lekkiej wirtualizacji i zarządzania kontenerami.
   * **Dlaczego to rozwiązanie:** Zapewnia higienę systemu. Narzędzia analityczne (Prometheus, Grafana) zostały zamknięte w odizolowanych kontenerach. Gwarantuje to brak konfliktów z głównym systemem operacyjnym (Debian) oraz wdraża profesjonalne podejście.
@@ -109,8 +132,19 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 * **Grafana:**
   * **Do czego służy:** Interaktywny interfejs analityczny.
   * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa.
+* **Integracja z Telegramem (Push Notifications):**
+  * **Do czego służy:** System natychmiastowego powiadamiania na smartfon.
+  * **Dlaczego to rozwiązanie:** Wprowadza do projektu elementy *Incident Response* (reagowania na incydenty). Zamiast polegać tylko na ręcznym sprawdzaniu wykresów, system wysyła alerty w czasie rzeczywistym (np. o zablokowanych atakach) prosto do kieszeni administratora.
 
 ### 5. Interfejs Zarządzania (Command Line)
 * **Zsh + Powerlevel10k + `cyberpulse.sh`:**
   * **Do czego służy:** Terminalowe centrum dowodzenia w PuTTY.
   * **Dlaczego to rozwiązanie:** Standardowa powłoka Bash została zastąpiona nowocześniejszym Zsh. Autorski skrypt powitalny automatycznie agreguje najważniejsze dane sprzętowe (via Neofetch) oraz weryfikuje na żywo stany usług systemowych i blokad, dostarczając pełen raport o sytuacji zaledwie w sekundę po zalogowaniu na serwer.
+  * 
+### 6. Portal Startowy i Reagowanie na Incydenty (UX & Alerting)
+* **Homer (Web Dashboard):**
+  * **Do czego służy:** Lekka, statyczna strona startowa serwera (tzw. landing page).
+  * **Dlaczego to rozwiązanie:** Działa jako główny "Hub" nawigacyjny całego Home Labu. Zamiast pamiętać dziesiątki portów i adresów IP dla Grafany, Pi-hole czy innych usług, Homer zapewnia scentralizowany, estetyczny panel w przeglądarce, z którego można jednym kliknięciem przejść do każdego modułu zarządzania.
+* **Integracja z Telegramem (Push Notifications):**
+  * **Do czego służy:** System natychmiastowego powiadamiania o krytycznych zdarzeniach na smartfon.
+  * **Dlaczego to rozwiązanie:** Aktywny SOC nie może polegać wyłącznie na ręcznym sprawdzaniu wykresów przez administratora. Wykorzystanie botów i webhooków Telegrama pozwala na wysyłanie alertów w czasie rzeczywistym (np. o zablokowanych atakach lub padnięciu usługi) prosto do kieszeni, skracając czas reakcji na incydent do absolutnego minimum.
