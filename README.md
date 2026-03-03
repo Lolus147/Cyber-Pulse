@@ -140,7 +140,7 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 * **Zsh + Powerlevel10k + `cyberpulse.sh`:**
   * **Do czego służy:** Terminalowe centrum dowodzenia w PuTTY.
   * **Dlaczego to rozwiązanie:** Standardowa powłoka Bash została zastąpiona nowocześniejszym Zsh. Autorski skrypt powitalny automatycznie agreguje najważniejsze dane sprzętowe (via Neofetch) oraz weryfikuje na żywo stany usług systemowych i blokad, dostarczając pełen raport o sytuacji zaledwie w sekundę po zalogowaniu na serwer.
-  * 
+    
 ### 6. Portal Startowy i Reagowanie na Incydenty (UX & Alerting)
 * **Homer (Web Dashboard):**
   * **Do czego służy:** Lekka, statyczna strona startowa serwera (tzw. landing page).
