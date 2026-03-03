@@ -16,7 +16,7 @@ Sercem całego systemu jest energooszczędny terminal (Thin Client), który idea
 
 
 
-![Panel CLI Cyber-Pulse](link_do_zdjecia_twojego_terminala.png)
+![Panel CLI Cyber-Pulse](images/terminal.png)
 
 ---
 
