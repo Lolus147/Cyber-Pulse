@@ -137,13 +137,15 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 * **Prometheus:**
   * **Do czego służy:** Potężna czasowa baza danych (Time-Series Database).
   * **Dlaczego to rozwiązanie:** Co kilkanaście sekund odpytuje system i usługi sieciowe o ich stan (np. utylizacja procesora, statystyki zablokowanych reklam, liczba banów w CrowdSec). Pamięta historyczne statystyki z dokładnością do pojedynczych sekund.
-* **Grafana:** <details>
-  <summary><strong>▶️ Dashboard Grafana (Kliknij, aby rozwinąć)</strong></summary>
-  <br>
-  <img alt="terminal-cli" src="images/grafana_dashboard.png" />
-</details>
+* **Grafana:** 
   * **Do czego służy:** Interaktywny interfejs analityczny.
-  * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa.
+  * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa oraz Loki (np. o zalogowaniach do systemu) i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa.<details>
+  * <summary><strong>▶️ Dashboard Grafana (Kliknij, aby rozwinąć)</strong></summary>
+  <br>
+  <img alt="grafana" src="images/grafana_dashboard.png" />
+</details>
+ 
+
 * **Integracja z Telegramem (Push Notifications):**
   * **Do czego służy:** System natychmiastowego powiadamiania na smartfon.
   * **Dlaczego to rozwiązanie:** Wprowadza do projektu elementy *Incident Response* (reagowania na incydenty). Zamiast polegać tylko na ręcznym sprawdzaniu wykresów, system wysyła alerty w czasie rzeczywistym (np. o zablokowanych atakach) prosto do kieszeni administratora.
