@@ -164,4 +164,4 @@ Projekt **Cyber-Pulse** to żywy organizm, który stale ewoluuje. Wraz z odkrywa
 
 ---
 
-🛡️ **Stworzone z pasją do Cyberbezpieczeństwa.** *Autor: **Paweł Zajczyk** 📫 **[LinkedIn]https://www.linkedin.com/in/pawel-zajczyk/**!
+🛡️ **Stworzone z pasją do Cyberbezpieczeństwa.** *Autor: **Paweł Zajczyk** 📫 **[LinkedIn](https://www.linkedin.com/in/pawel-zajczyk/)**!
