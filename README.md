@@ -140,10 +140,12 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 * **Grafana:** 
   * **Do czego służy:** Interaktywny interfejs analityczny.
   * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa oraz Loki (np. o zalogowaniach do systemu) i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa.
+  <br>
+  ---
   <details>
   <summary><strong>▶️ Dashboard Grafana (Kliknij, aby rozwinąć)</strong></summary>
   <br>
-  <img alt="Dashboard-Grafana" src="images/dashboard_grafana.png" />
+  <img alt="Dashboard-Grafana" src="images/grafana_dashboard.png" />
   </details>
 
 * **Integracja z Telegramem (Push Notifications):**
