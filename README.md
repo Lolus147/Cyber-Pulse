@@ -156,3 +156,12 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 * **Integracja z Telegramem (Push Notifications):**
   * **Do czego służy:** System natychmiastowego powiadamiania o krytycznych zdarzeniach na smartfon.
   * **Dlaczego to rozwiązanie:** Aktywny SOC nie może polegać wyłącznie na ręcznym sprawdzaniu wykresów przez administratora. Wykorzystanie botów i webhooków Telegrama pozwala na wysyłanie alertów w czasie rzeczywistym (np. o zablokowanych atakach lub padnięciu usługi) prosto do kieszeni, skracając czas reakcji na incydent do absolutnego minimum.
+
+---
+
+### ⏳ Ciąg dalszy nastąpi... (To be continued)
+Projekt **Cyber-Pulse** to żywy organizm, który stale ewoluuje. Wraz z odkrywaniem nowych wektorów ataków i testowaniem kolejnych narzędzi analitycznych, infrastruktura będzie się rozrastać.
+
+---
+
+🛡️ **Stworzone z pasją do Cyberbezpieczeństwa.** *Autor: **Paweł Zajczyk** 📫 **[LinkedIn]https://www.linkedin.com/in/pawel-zajczyk/**!
