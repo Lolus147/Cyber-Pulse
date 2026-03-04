@@ -137,7 +137,11 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
 * **Prometheus:**
   * **Do czego służy:** Potężna czasowa baza danych (Time-Series Database).
   * **Dlaczego to rozwiązanie:** Co kilkanaście sekund odpytuje system i usługi sieciowe o ich stan (np. utylizacja procesora, statystyki zablokowanych reklam, liczba banów w CrowdSec). Pamięta historyczne statystyki z dokładnością do pojedynczych sekund.
-* **Grafana:**
+* **Grafana:** <details>
+  <summary><strong>▶️ Dashboard Grafana (Kliknij, aby rozwinąć)</strong></summary>
+  <br>
+  <img alt="terminal-cli" src="images/grafana_dashboard.png" />
+</details>
   * **Do czego służy:** Interaktywny interfejs analityczny.
   * **Dlaczego to rozwiązanie:** Czerpie suche dane z Prometheusa i przekształca je w dynamiczne dashboardy. Pozwala na błyskawiczną, wizualną ocenę stanu bezpieczeństwa.
 * **Integracja z Telegramem (Push Notifications):**
@@ -150,7 +154,7 @@ Poniżej znajduje się szczegółowe zestawienie narzędzi wykorzystanych w proj
   * **Dlaczego to rozwiązanie:** Standardowa powłoka Bash została zastąpiona nowocześniejszym Zsh. Autorski skrypt powitalny automatycznie agreguje najważniejsze dane sprzętowe (via Neofetch) oraz weryfikuje na żywo stany usług systemowych i blokad, dostarczając pełen raport o sytuacji zaledwie w sekundę po zalogowaniu na serwer.
     
 ### 6. Portal Startowy i Reagowanie na Incydenty (UX & Alerting)
-* **Homer (Web Dashboard):**
+* **Homer (Web Dashboard):** 
   * **Do czego służy:** Lekka, statyczna strona startowa serwera (tzw. landing page).
   * **Dlaczego to rozwiązanie:** Działa jako główny "Hub" nawigacyjny całego Home Labu. Zamiast pamiętać dziesiątki portów i adresów IP dla Grafany, Pi-hole czy innych usług, Homer zapewnia scentralizowany, estetyczny panel w przeglądarce, z którego można jednym kliknięciem przejść do każdego modułu zarządzania.
 * **Integracja z Telegramem (Push Notifications):**
